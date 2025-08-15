@@ -44,7 +44,7 @@ export default function CategoryBasePosts() {
         <ErrorComponent
           message={errorMessage}
           code={errorCode}
-          actionText="Kategorilere Dön"
+          actionText="Back to Categories"
           onAction={() => (window.location.href = "/blog/categories")}
         />
       </div>
@@ -67,8 +67,8 @@ export default function CategoryBasePosts() {
             {slugToReadable(category)}
           </h1>
           <p className="mt-2 text-sm sm:text-base text-gray-300">
-            {slugToReadable(category)} kategorisindeki güncel içeriklerimizi
-            keşfedin.
+            Discover our latest content in the {slugToReadable(category)}{" "}
+            category.
           </p>
         </div>
 

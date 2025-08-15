@@ -154,11 +154,11 @@ export default function RegisterComponent() {
 
           <Checkbox isRequired className="py-4" size="sm">
             I agree to the&nbsp;
-            <Link href="#" size="sm">
+            <Link href="/disclaimer" size="sm">
               Terms of Service
             </Link>
             &nbsp;and&nbsp;
-            <Link href="#" size="sm">
+            <Link href="/privacy-policy" size="sm">
               Privacy Policy
             </Link>
           </Checkbox>

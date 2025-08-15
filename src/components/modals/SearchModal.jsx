@@ -288,7 +288,7 @@ export default function SearchModal({ isOpen, onClose }) {
                       <div className="flex flex-wrap gap-2 mt-2 mb-2">
                         {post.category && (
                           <Tooltip
-                            content={`Kategori: ${slugToReadable(
+                            content={`Category: ${slugToReadable(
                               post.category
                             )}`}
                           >
@@ -306,7 +306,7 @@ export default function SearchModal({ isOpen, onClose }) {
                         )}
 
                         {post.author && post.author.name && (
-                          <Tooltip content="Yazar">
+                          <Tooltip content="Author">
                             <Chip size="sm" variant="flat" radius="sm">
                               {post.author.name}
                             </Chip>
@@ -314,7 +314,7 @@ export default function SearchModal({ isOpen, onClose }) {
                         )}
 
                         {post.publishedAt && (
-                          <Tooltip content="Yayınlanma Tarihi">
+                          <Tooltip content="Published Date">
                             <Chip size="sm" variant="flat" radius="sm">
                               {formatDate(post.publishedAt)}
                             </Chip>

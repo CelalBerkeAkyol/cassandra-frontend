@@ -13,7 +13,7 @@ import { Icon } from "@iconify/react";
 
 // Format date to readable format
 const formatDate = (dateString) => {
-  return new Date(dateString).toLocaleDateString("tr-TR", {
+  return new Date(dateString).toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -52,7 +52,7 @@ const RelatedPostsComponent = ({ currentPostId, category }) => {
   return (
     <div className="w-full  ">
       <h2 className="text-lg text-left text-gray-800 font-bold mb-2">
-        Benzer Yazılar
+        Related Posts
       </h2>
       <div className="flex flex-col gap-4">
         {relatedPosts.map((post) => {
@@ -60,7 +60,7 @@ const RelatedPostsComponent = ({ currentPostId, category }) => {
           const summary = post.summary
             ? post.summary.substring(0, 100) +
               (post.summary.length > 100 ? "..." : "")
-            : "Açıklama bulunmuyor";
+            : "No description";
 
           return (
             <Card
@@ -93,7 +93,7 @@ const RelatedPostsComponent = ({ currentPostId, category }) => {
                   </div>
                   <div className="flex items-center gap-1">
                     <Icon icon="mdi:eye-outline" width={14} />
-                    <span>{post.views} görüntülenme</span>
+                    <span>{post.views} views</span>
                   </div>
                 </div>
               </CardFooter>

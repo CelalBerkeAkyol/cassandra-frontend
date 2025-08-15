@@ -26,23 +26,23 @@ const BlogPostComponent = ({ post }) => {
     navigate("/team");
   };
 
-  // Tarih formatı
-  const formattedDate = new Date(post.createdAt).toLocaleDateString("tr-TR", {
+  // Date format
+  const formattedDate = new Date(post.createdAt).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
 
-  // Yazar bilgileri
+  // Author info
   const authorName =
     typeof post.author === "object" && post.author?.userName
       ? post.author.userName
-      : "İsimsiz Yazar";
+      : "Anonymous Author";
 
   const authorOccupation =
     typeof post.author === "object" && post.author?.occupation
       ? post.author.occupation
-      : "Yazar";
+      : "Author";
 
   // Avatar URL ve fallback işlemi
   const getAvatarUrl = () => {
@@ -107,10 +107,10 @@ const BlogPostComponent = ({ post }) => {
             <span>{formattedDate}</span>
           </div>
 
-          {/* Görüntülenme */}
+          {/* Views */}
           <div className="flex items-center gap-1">
             <Icon icon="mdi:eye-outline" width={16} />
-            <span>{post.views} görüntülenme</span>
+            <span>{post.views} views</span>
           </div>
         </div>
       </div>

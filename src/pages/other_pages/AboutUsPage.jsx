@@ -46,94 +46,29 @@ const AboutUsPage = () => {
             </p>
           </CardBody>
         </Card>
-        {/* KİMLER İÇİN UYGUNDUR? */}
-        <Card shadow="sm" className="p-6 bg-white mt-6">
-          <CardBody>
-            <h2 className="text-2xl font-semibold mb-4">
-              Kimler İçin Uygundur?
-            </h2>
 
-            <p className="leading-relaxed">
-              Platformumuz, yatırım kararlarını <strong>veri odaklı</strong>{" "}
-              yaklaşımlarla güçlendirmek isteyen herkesi hedefler. Özellikle:
-            </p>
-
-            <ul className="list-disc pl-6 pt-2 space-y-1 leading-relaxed">
-              <li>
-                Finansal okuryazarlığını geliştirmeyi amaçlayan bireysel
-                yatırımcılar
-              </li>
-              <li>
-                Ekonomi, finans veya veri bilimi alanında kendini geliştiren
-                öğrenciler
-              </li>
-              <li>
-                Python ve veri bilimi araçlarını yatırım analizine uygulamak
-                isteyen profesyoneller
-              </li>
-              <li>
-                Derin öğrenme ve makine öğrenmesiyle portföy optimizasyonu, risk
-                analizi vb. modeller kurmak isteyen araştırmacılar
-              </li>
-            </ul>
-          </CardBody>
-        </Card>
-
-        {/* KİMLER İÇİN UYGUN DEĞİLDİR? */}
-        <Card shadow="sm" className="p-6 bg-white mt-6">
-          <CardBody>
-            <h2 className="text-2xl font-semibold mb-4">
-              Kimler İçin Uygun Değildir?
-            </h2>
-
-            <p className="leading-relaxed">
-              Aşağıdaki beklentilere sahip kullanıcılar bu platformdan
-              aradıkları faydayı göremeyebilir:
-            </p>
-
-            <ul className="list-disc pl-6 pt-2 space-y-1 leading-relaxed">
-              <li>
-                Hızlı ve garantili kâr sağlayacak “hazır al-sat sinyalleri”
-                arayanlar
-              </li>
-              <li>
-                Veri analizi ve temel araştırma süreçlerine zaman ayırmak
-                istemeyenler
-              </li>
-              <li>
-                Bilimsel yönteme dayalı karar almaktansa yalnızca sezgiyle
-                hareket edenler
-              </li>
-              <li>
-                Finansal sorumluluğu tamamen üçüncü kişilere devretmek
-                isteyenler
-              </li>
-            </ul>
-          </CardBody>
-        </Card>
         <Spacer y={12} />
         {/* Nasıl Destek Olabilirsiniz Bölümü */}
 
         <Card shadow="sm" className="p-6 bg-white">
           <h2 className="text-2xl font-semibold text-gray-800 pl-2 ">
-            Nasıl Destek Olabilirsiniz?
+            How Can You Support Us?
           </h2>
           <CardBody>
             <ul className="list-disc p-2 space-y-2">
-              <li> İçeriklerimizi paylaşabilirsiniz.</li>
+              <li> You can share our content.</li>
 
               <li>
-                Projeye bağış yaparak daha fazla içerik üretmemizi
-                destekleyebilirsiniz.
+                You can support us to produce more content by making a donation
+                to the project.
               </li>
 
               <li>
-                Blog yazıları için konular önererek içerik üretimimize katkı
-                sağlayabilirsiniz.
+                You can contribute to our content production by suggesting
+                topics for blog posts.
               </li>
               <li>
-                Yapıcı yorumlarınızı paylaşarak içeriklerimizi
-                geliştirebilirsiniz.
+                You can improve our content by sharing constructive comments.
               </li>
             </ul>
           </CardBody>
@@ -143,10 +78,10 @@ const AboutUsPage = () => {
         {/* İletişim Bölümü */}
 
         <Card shadow="sm" className="p-6 bg-white">
-          <h2 className="text-2xl font-semibold text-gray-800 ">İletişim</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 ">Contact</h2>
           <CardBody>
             <p className="text-gray-700 text-lg">
-              Geliştirici mail{" "}
+              Developer email{" "}
               <a
                 href="mailto:celalberke@cassandra.com.tr"
                 className="text-blue-600 underline"
@@ -156,7 +91,7 @@ const AboutUsPage = () => {
             </p>
 
             <p className="text-gray-700 text-lg flex items-center gap-2">
-              Geliştirici Linkedin{" "}
+              Developer LinkedIn{" "}
               <a
                 href="https://www.linkedin.com/in/celal-berke-akyol-389a3a216/"
                 target="_blank"
@@ -168,7 +103,7 @@ const AboutUsPage = () => {
               </a>
             </p>
             <p className="text-gray-700 text-lg flex items-center gap-2">
-              Web sitesinin kaynak kodları{" "}
+              Website source code{" "}
               <a
                 href="https://github.com/CelalBerkeAkyol/cassandra-frontend"
                 target="_blank"
