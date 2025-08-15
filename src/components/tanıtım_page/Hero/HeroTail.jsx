@@ -18,30 +18,30 @@ export default function HeroTail() {
         <div className="mx-auto max-w-4xl py-16 sm:py-24 md:py-32 lg:py-40">
           <div className="text-center">
             <h1 className="text-balance text-4xl font-semibold  text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl">
-              Finans, Ekonomi ve Yapay Zekanın Kesişim Noktası
+              The Intersection of Finance, Economics and Artificial Intelligence
             </h1>
             <p className="mt-6 sm:mt-8 text-pretty text-base sm:text-lg font-medium text-gray-500 sm:text-xl leading-8">
-              Kişisel finans yönetiminden, şirket değerlemesine, yapay zeka ile
-              yatırım stratejilerine kadar her şey.
+              Everything from personal finance management to company valuation
+              and AI-powered investment strategies.
             </p>
             <div className="hidden sm:mt-8 sm:flex sm:justify-center gap-4">
-              {/* Kategorileri Keşfet */}
+              {/* Explore Categories */}
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                Kategorileri Keşfet.{" "}
+                Explore Categories.{" "}
                 <a
                   href="/blog/categories"
                   className="font-semibold text-primary"
                 >
                   <span aria-hidden="true" className="absolute inset-0" />
-                  Kategorileri Görüntüle <span aria-hidden="true">&rarr;</span>
+                  View Categories <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
-              {/* Yazıları Keşfet */}
+              {/* Explore Posts */}
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                Yazıları Keşfet.{" "}
+                Explore Posts.{" "}
                 <a href="/blog/posts" className="font-semibold text-primary">
                   <span aria-hidden="true" className="absolute inset-0" />
-                  Son Yazıları Görüntüle <span aria-hidden="true">&rarr;</span>
+                  View Latest Posts <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
             </div>

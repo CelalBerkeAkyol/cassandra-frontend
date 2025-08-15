@@ -6,21 +6,21 @@ import {
 
 const features = [
   {
-    name: "Ekonomi ve Finans Temelleri",
+    name: "Economics and Finance Fundamentals",
     description:
-      "Ekonomi, Finans, Yatırım gibi alanlardaki kavramların anlamları ve verilerin yorumlanması",
+      "Understanding concepts in Economics, Finance, Investment and interpreting data",
     icon: CalculatorIcon,
   },
   {
-    name: "Veri Bilimi (Data Science)",
+    name: "Data Science",
     description:
-      "Python kullanarak veri toplama, temizleme ve yeni özellik keşfetme ve görselleştirme.",
+      "Data collection, cleaning, feature discovery and visualization using Python.",
     icon: ChartBarIcon,
   },
   {
-    name: "Yapay Zeka (Artificial Intelligence)",
+    name: "Artificial Intelligence",
     description:
-      "Machine Learning ve Deep Learning ile ihtiyaçlarınıza göre yapay zeka modelleri oluşturmak.",
+      "Creating artificial intelligence models according to your needs with Machine Learning and Deep Learning.",
     icon: CpuChipIcon,
   },
 ];
@@ -33,15 +33,15 @@ export default function SSFeatureComponent() {
           <div className="lg:pt-4">
             <div className="text-center mx-auto max-w-3xl mb-12">
               <h2 className="text-base/7 font-semibold text-primary">
-                Neler öğreneceksiniz?
+                What will you learn?
               </h2>
               <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                Yatırıma Farklı Bir Bakış
+                A Different Perspective on Investment
               </p>
               <p className="mt-6 text-lg/8 text-gray-600">
-                Yatırım kararlarınız için kendi yapay zeka modellerinizi
-                oluşturabilir, veri analizi ile görünmeyen finansal verileri
-                keşfedebilirsiniz.
+                You can create your own artificial intelligence models for your
+                investment decisions and discover hidden financial data through
+                data analysis.
               </p>
             </div>
             <dl className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10">

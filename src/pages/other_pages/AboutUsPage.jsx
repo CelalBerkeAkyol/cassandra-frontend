@@ -9,41 +9,40 @@ const AboutUsPage = () => {
       <CustomNavbar />
 
       <div className="max-w-3xl mx-auto px-6 py-10">
-        {/* Başlık */}
+        {/* Title */}
         <h1 className="text-4xl font-bold text-gray-900 text-center mb-6">
-          Hakkımızda
+          About Us
         </h1>
 
-        {/* Hakkımda Kartı */}
+        {/* About Me Card */}
         <Card shadow="sm" className="p-6 bg-white">
           <CardBody>
             <p className="leading-relaxed">
-              Bu platform, <strong>Celal&nbsp;Berke&nbsp;Akyol</strong>{" "}
-              tarafından geliştirilmiştir ve yatırım ilgililerine veri temelli,
-              analiz içerikler sunmayı amaçlar.
+              This platform was developed by{" "}
+              <strong>Celal&nbsp;Berke&nbsp;Akyol</strong> and aims to provide
+              data-driven, analytical content to investment enthusiasts.
             </p>
 
             <p className="pt-2 leading-relaxed">
-              Yatırım kararlarının sezgilere değil,{" "}
-              <strong>kanıta dayalı</strong> ve
-              <strong> bilimsel</strong> yöntemlere dayanması gerektiğine
-              inanıyoruz. Bu nedenle finansal verileri <strong>Python</strong>{" "}
-              ve modern veri bilimi araçlarıyla analiz ediyoruz.
+              We believe that investment decisions should be based on{" "}
+              <strong>evidence-based</strong> and
+              <strong> scientific</strong> methods rather than intuition.
+              Therefore, we analyze financial data using <strong>Python</strong>{" "}
+              and modern data science tools.
             </p>
 
             <p className="pt-2 leading-relaxed">
-              Blogumuzda; makroekonomik göstergelerden şirket değerlemelerine,
-              portföy optimizasyonundan risk yönetimine kadar geniş bir
-              yelpazede
-              <strong> Veri Bilimi</strong> ve
-              <strong> Makine Öğrenmesi</strong> teknikleriyle hazırlanmış
-              içerikler bulacaksınız.
+              In our blog, you will find content prepared with{" "}
+              <strong>Data Science</strong> and
+              <strong> Machine Learning</strong> techniques across a wide range
+              from macroeconomic indicators to company valuations, portfolio
+              optimization to risk management.
             </p>
 
             <p className="pt-2 leading-relaxed">
-              Burada paylaşılan hiçbir içerik <strong>yatırım tavsiyesi</strong>{" "}
-              niteliği taşımaz. Karar vermeden önce lütfen kendi araştırmanızı
-              yapın veya yetkin bir danışmana başvurun.
+              None of the content shared here constitutes{" "}
+              <strong>investment advice</strong>. Please do your own research or
+              consult a qualified advisor before making decisions.
             </p>
           </CardBody>
         </Card>

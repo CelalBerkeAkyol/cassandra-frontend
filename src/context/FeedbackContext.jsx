@@ -19,7 +19,7 @@ export function FeedbackProvider({ children }) {
     type: "info",
     code: "",
     onAction: null,
-    actionText: "Tamam",
+    actionText: "OK",
   });
 
   // Toast state
@@ -30,7 +30,7 @@ export function FeedbackProvider({ children }) {
     duration: 3000,
   });
 
-  // Alert göster
+  // Show alert
   const showAlert = useCallback(
     ({
       message,
@@ -38,7 +38,7 @@ export function FeedbackProvider({ children }) {
       type = "info",
       code = "",
       onAction = null,
-      actionText = "Tamam",
+      actionText = "OK",
     }) => {
       setAlert({
         show: true,

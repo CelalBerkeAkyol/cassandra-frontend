@@ -21,36 +21,36 @@ const HardDeleteUserModal = ({
         {(onCloseModal) => (
           <>
             <ModalHeader className="flex flex-col gap-1 text-red-600">
-              Kullanıcıyı Kalıcı Olarak Silme
+              Permanently Delete User
             </ModalHeader>
             <ModalBody>
               {selectedUser && (
                 <div className="space-y-2">
                   <p className="font-semibold text-danger">
-                    DİKKAT: Bu işlem geri alınamaz!
+                    WARNING: This action cannot be undone!
                   </p>
                   <p>
-                    <b>{selectedUser.userName}</b> ({selectedUser.email})
-                    kullanıcısını veritabanından kalıcı olarak silmek
-                    istediğinize emin misiniz?
+                    Are you sure you want to permanently delete user{" "}
+                    <b>{selectedUser.userName}</b> ({selectedUser.email}) from
+                    the database?
                   </p>
                   <p className="text-red-500">
-                    Bu işlem sonucunda kullanıcının tüm verileri silinecek ve
-                    geri getirilemeyecektir.
+                    As a result of this action, all user data will be deleted
+                    and cannot be recovered.
                   </p>
                 </div>
               )}
             </ModalBody>
             <ModalFooter>
               <Button variant="flat" onPress={onCloseModal}>
-                İptal
+                Cancel
               </Button>
               <Button
                 className="bg-red-600 text-white hover:bg-red-700"
                 onPress={handleHardDeleteUser}
                 isLoading={isLoading}
               >
-                Kalıcı Olarak Sil
+                Permanently Delete
               </Button>
             </ModalFooter>
           </>

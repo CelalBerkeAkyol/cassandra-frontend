@@ -123,7 +123,7 @@ export default function SearchModal({ isOpen, onClose }) {
       >
         {/* Header */}
         <div className="p-4 border-b flex justify-between items-center sticky top-0 bg-white z-10">
-          <h2 className="text-xl font-bold">Arama</h2>
+          <h2 className="text-xl font-bold">Search</h2>
           <Button
             isIconOnly
             variant="light"
@@ -141,7 +141,7 @@ export default function SearchModal({ isOpen, onClose }) {
           <div className="w-full sticky top-0 bg-white pt-2 pb-3 z-10">
             <Input
               ref={inputRef}
-              placeholder={`En az ${MIN_CHARS} karakter girin...`}
+              placeholder={`Please enter at least ${MIN_CHARS} characters...`}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               onBlur={handleInputBlur}
@@ -192,27 +192,25 @@ export default function SearchModal({ isOpen, onClose }) {
               }}
               description={
                 searchTerm.length > 0 && searchTerm.length < MIN_CHARS
-                  ? `En az ${MIN_CHARS} karakter girmelisiniz (${
+                  ? `You must enter at least ${MIN_CHARS} characters (${
                       MIN_CHARS - searchTerm.length
-                    } karakter daha)`
-                  : "Enter tuşuna basarak arama yapabilirsiniz."
+                    } more characters)`
+                  : "You can search by pressing Enter."
               }
             />
           </div>
 
-          {/* Sonuçlar Bölümü */}
+          {/* Results Section */}
           <div className="mt-2">
-            {/* Yükleniyor Durumu */}
+            {/* Loading State */}
             {loading && (
               <div className="flex justify-center items-center py-8">
                 <Spinner color="primary" size="lg" />
-                <p className="ml-3 text-gray-600 font-medium">
-                  Arama yapılıyor...
-                </p>
+                <p className="ml-3 text-gray-600 font-medium">Searching...</p>
               </div>
             )}
 
-            {/* Hata Durumu */}
+            {/* Error State */}
             {!loading && error && (
               <div className="text-center py-4 border border-red-200 rounded-lg bg-red-50 shadow-sm">
                 <Icon
@@ -226,17 +224,17 @@ export default function SearchModal({ isOpen, onClose }) {
                   className="mt-3"
                   onClick={handleButtonClick(handleManualSearch)}
                 >
-                  Tekrar Dene
+                  Try Again
                 </Button>
               </div>
             )}
 
-            {/* Yönlendirme Mesajları */}
+            {/* Guidance Messages */}
             {!loading && !error && (
               <>
                 {searchTerm && searchTerm.length < MIN_CHARS && (
                   <p className="text-gray-500 text-center py-4">
-                    Arama için en az {MIN_CHARS} karakter girin
+                    Enter at least {MIN_CHARS} characters to search
                   </p>
                 )}
 
@@ -250,11 +248,10 @@ export default function SearchModal({ isOpen, onClose }) {
                         className="w-12 h-12 mx-auto text-gray-400 mb-3"
                       />
                       <p className="text-gray-700 font-medium mb-2">
-                        Aradığınız içerik bulunamadı
+                        The content you searched for was not found
                       </p>
                       <p className="text-gray-500 text-sm px-4 mb-3">
-                        Farklı anahtar kelimeler kullanarak yeniden arama
-                        yapabilirsiniz.
+                        You can search again using different keywords.
                       </p>
                       <Button
                         color="primary"
@@ -264,14 +261,14 @@ export default function SearchModal({ isOpen, onClose }) {
                           <Icon icon="material-symbols:search" width="16" />
                         }
                       >
-                        Tekrar Ara
+                        Search Again
                       </Button>
                     </div>
                   )}
               </>
             )}
 
-            {/* Sonuç Listesi */}
+            {/* Results List */}
             {results.length > 0 && (
               <div className="mt-2">
                 {results.map((post) => (

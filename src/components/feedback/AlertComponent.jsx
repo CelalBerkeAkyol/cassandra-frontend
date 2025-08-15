@@ -15,12 +15,12 @@ import { Alert, Button } from "@nextui-org/react";
  * @returns {React.ReactNode}
  */
 export default function AlertComponent({
-  message = "Bir uyarı mesajı var.",
+  message = "There is a warning message.",
   title,
   code,
   type = "info", // error, warning, success, info
   onAction,
-  actionText = "Tamam",
+  actionText = "OK",
   onClose,
   showCloseButton = true,
 }) {
@@ -35,26 +35,26 @@ export default function AlertComponent({
   // Tip belirtilmemişse veya geçersizse varsayılan renk
   const color = colorMap[type] || "primary";
 
-  // Uyarı tipi temelinde varsayılan başlık
+  // Default title based on alert type
   if (!title) {
     switch (type) {
       case "error":
-        title = "Hata";
+        title = "Error";
         break;
       case "warning":
-        title = "Uyarı";
+        title = "Warning";
         break;
       case "success":
-        title = "Başarılı";
+        title = "Success";
         break;
       case "info":
       default:
-        title = "Bilgi";
+        title = "Information";
     }
   }
 
-  // Kod varsa mesaja ekle
-  const fullMessage = code ? `${message} (Kod: ${code})` : message;
+  // Add code to message if present
+  const fullMessage = code ? `${message} (Code: ${code})` : message;
 
   return (
     <div className="flex flex-col w-full">
@@ -75,7 +75,7 @@ export default function AlertComponent({
 
           {showCloseButton && (
             <Button variant="light" onPress={onClose}>
-              Kapat
+              Close
             </Button>
           )}
         </div>

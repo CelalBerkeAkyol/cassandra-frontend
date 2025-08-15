@@ -36,11 +36,11 @@ const CategoriesPage = () => {
           );
           setCategories(activeCategories);
         } else {
-          setError("Kategoriler yüklenirken bir hata oluştu.");
+          setError("An error occurred while loading categories.");
         }
       } catch (err) {
-        setError(err.message || "Kategoriler yüklenirken bir hata oluştu.");
-        showError(err.message || "Kategoriler yüklenirken bir hata oluştu.");
+        setError(err.message || "An error occurred while loading categories.");
+        showError(err.message || "An error occurred while loading categories.");
       } finally {
         setLoading(false);
       }
@@ -60,11 +60,7 @@ const CategoriesPage = () => {
       <div className="flex flex-col min-h-screen">
         <CustomNavbar />
         <div className="flex-grow flex justify-center items-center">
-          <Spinner
-            size="lg"
-            color="primary"
-            label="Kategoriler yükleniyor..."
-          />
+          <Spinner size="lg" color="primary" label="Loading categories..." />
         </div>
       </div>
     );
@@ -79,7 +75,7 @@ const CategoriesPage = () => {
             message={error}
             code="FETCH_ERROR"
             onAction={() => window.location.reload()}
-            actionText="Tekrar Dene"
+            actionText="Try Again"
           />
         </div>
       </div>
@@ -99,9 +95,9 @@ const CategoriesPage = () => {
         <div className="bg-white py-2 mb-12 min-h-full">
           <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
             <div className="mx-auto my-4 sm:my-6 text-start bg-gradient-to-r from-sky-950 to-lime-950 text-white py-4 px-4 rounded-lg shadow-lg">
-              <h1 className="text-2xl sm:text-3xl font-bold">Kategoriler</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold">Categories</h1>
               <p className="mt-2 text-sm sm:text-base text-gray-300">
-                Tüm blog kategorileri ve içerikleri
+                All blog categories and content
               </p>
             </div>
 
@@ -113,10 +109,10 @@ const CategoriesPage = () => {
                     className="text-6xl mx-auto text-gray-400"
                   />
                   <h3 className="mt-4 text-xl font-medium text-gray-900">
-                    Henüz Hiç Kategori Bulunmuyor
+                    No Categories Found Yet
                   </h3>
                   <p className="mt-2 text-gray-600">
-                    Şu anda blogda herhangi bir kategori bulunmamaktadır.
+                    There are currently no categories in the blog.
                   </p>
                 </div>
               ) : (
@@ -147,7 +143,7 @@ const CategoriesPage = () => {
                         </div>
                         <div className="text-gray-600 text-sm line-clamp-3">
                           {category.description ||
-                            `${category.name} kategorisindeki makaleler, analizler ve detaylı içerikleri görüntüleyin.`}
+                            `View articles, analyses and detailed content in the ${category.name} category.`}
                         </div>
                       </div>
 
@@ -159,7 +155,7 @@ const CategoriesPage = () => {
                           className="flex items-center text-primary text-sm font-medium"
                           onClick={(e) => e.stopPropagation()}
                         >
-                          <span>Makaleleri Görüntüle</span>
+                          <span>View Articles</span>
                           <Icon icon="mdi:arrow-right" className="ml-2" />
                         </Link>
                       </div>

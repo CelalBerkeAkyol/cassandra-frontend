@@ -1,18 +1,18 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-// Kategori isimlerini okunabilir hale getirmek için kullanılıyor
+// Used to make category names readable
 function slugToReadable(slug) {
-  if (!slug) return "Kategori Yok";
+  if (!slug) return "No Category";
   return slug
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 }
 
-// Başlığı kısaltan fonksiyon (örnek: max 200 karakter)
+// Function to truncate title (example: max 200 characters)
 function truncateText(text, maxLength = 200) {
-  if (!text) return "İçerik yok";
+  if (!text) return "No content";
   return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 }
 
@@ -20,10 +20,10 @@ const PostCardComponent = ({ post }) => {
   const navigate = useNavigate();
 
   const handleView = () => {
-    // Post görüntüleme işlemleri
+    // Post viewing operations
   };
 
-  // Gösterilecek özet bilgisini ayarla
+  // Set the summary information to be displayed
   const summarySource =
     post.summary && post.summary.trim() !== "" ? post.summary : post.content;
   const finalSummary = truncateText(summarySource, 200);
@@ -55,17 +55,17 @@ const PostCardComponent = ({ post }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <span className="rounded-full bg-gray-100 px-2 py-1 hover:bg-gray-200">
-              {slugToReadable(post.category) || "Kategori yok"}
+              {slugToReadable(post.category) || "No category"}
             </span>
           </Link>
           <time dateTime={post.createdAt || ""} className="text-gray-500">
             {post.createdAt
-              ? new Date(post.createdAt).toLocaleDateString("tr-TR", {
+              ? new Date(post.createdAt).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
                 })
-              : "Tarih yok"}
+              : "No date"}
           </time>
         </div>
 
@@ -76,7 +76,7 @@ const PostCardComponent = ({ post }) => {
               onClick={(e) => e.stopPropagation()}
               className="hover:text-primary"
             >
-              {post.title || "Başlık yok"}
+              {post.title || "No title"}
             </Link>
           </h3>
           <div className="text-gray-600 text-xs sm:text-sm line-clamp-3">
@@ -100,10 +100,10 @@ const PostCardComponent = ({ post }) => {
             className="font-medium text-gray-900 cursor-pointer hover:text-primary"
             onClick={handleAuthorClick}
           >
-            {post.author?.userName || "Anonim Yazar"}
+            {post.author?.userName || "Anonymous Author"}
           </p>
           <p className="text-gray-500 text-xs">
-            {post.author?.occupation || "Yazar"}
+            {post.author?.occupation || "Author"}
           </p>
         </div>
       </div>

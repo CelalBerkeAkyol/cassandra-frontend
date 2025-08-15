@@ -10,7 +10,7 @@ import ErrorComponent from "./ErrorComponent";
  * @returns {React.ReactNode}
  */
 export default function ValidationErrorComponent({
-  message = "Form doğrulama hatası",
+  message = "Form validation error",
   errors = {},
   onAction,
 }) {
@@ -43,7 +43,7 @@ export default function ValidationErrorComponent({
       message={formatErrorsList()}
       type="validation"
       color="warning"
-      actionText="Düzelt"
+      actionText="Fix"
       onAction={onAction}
     />
   );

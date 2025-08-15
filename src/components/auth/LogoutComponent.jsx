@@ -17,9 +17,9 @@ export default function LogoutComponent({ sidebar = false }) {
     try {
       await dispatch(logoutUser()).unwrap();
       dispatch(clearState()); // Ekstra temizlik (opsiyonel)
-      success("Başarıyla çıkış yapıldı");
+      success("Successfully logged out");
     } catch (error) {
-      showError(error?.message || "Çıkış yapılırken bir hata oluştu");
+      showError(error?.message || "An error occurred while logging out");
     }
   };
 
@@ -52,7 +52,7 @@ export default function LogoutComponent({ sidebar = false }) {
       onClick={handleLogout}
       className="min-w-0 px-2"
     >
-      <span className="hidden xl:block">Çıkış</span>
+      <span className="hidden xl:block">Logout</span>
     </Button>
   );
 }

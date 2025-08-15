@@ -13,10 +13,10 @@ const DeleteConfirmationModal = ({
   isOpen,
   onClose,
   onConfirm,
-  title = "Silme Onayı",
-  message = "Bu öğeyi silmek istediğinize emin misiniz?",
-  confirmLabel = "Sil",
-  cancelLabel = "İptal",
+  title = "Delete Confirmation",
+  message = "Are you sure you want to delete this item?",
+  confirmLabel = "Delete",
+  cancelLabel = "Cancel",
   isLoading = false,
 }) => {
   return (
