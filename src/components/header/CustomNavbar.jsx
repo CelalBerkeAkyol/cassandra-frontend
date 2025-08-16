@@ -28,12 +28,6 @@ const navbarLinks = [
   { name: "Categories", path: "/blog/categories" },
 ];
 
-const categories = [
-  { name: "Economy", path: "/blog/category/ekonomi" },
-  { name: "Finance", path: "/blog/category/finans" },
-  { name: "Data Science", path: "/blog/category/veri-bilimi" },
-];
-
 // Seçici fonksiyonları bileşen dışına taşıyarak her render'da yeniden oluşturulmasını önlüyoruz
 const selectIsLoggedIn = (state) => state.user.isLoggedIn;
 const selectUserInfo = (state) => state.user.userInfo;
@@ -145,31 +139,7 @@ function CustomNavbar() {
             </NavbarItem>
           ))}
 
-          <Dropdown>
-            <DropdownTrigger className="default">
-              <Button
-                variant="default"
-                className="text-gray-900 hover:text-primary h-full"
-                endContent={
-                  <Icon icon="material-symbols:arrow-drop-down" width="20" />
-                }
-                style={navTextStyle}
-              >
-                Popular Categories
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu aria-label="Categories" color="default">
-              {categories.map((item, index) => (
-                <DropdownItem
-                  key={index}
-                  onClick={() => handleNavigate(item.path)}
-                  textValue={item.name}
-                >
-                  <span style={navTextStyle}>{item.name}</span>
-                </DropdownItem>
-              ))}
-            </DropdownMenu>
-          </Dropdown>
+          {/* Popular Categories dropdown removed */}
         </NavbarContent>
 
         {/* Ara butonu ve kullanıcı işlemleri */}
@@ -253,25 +223,7 @@ function CustomNavbar() {
               </NavbarMenuItem>
             ))}
 
-            <NavbarMenuItem>
-              <div className="py-4">
-                <p className="font-semibold mb-3" style={navTextStyle}>
-                  Popular Categories
-                </p>
-                <div className="flex flex-col gap-2 pl-2">
-                  {categories.map((item, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleNavigate(item.path)}
-                      className="w-full text-left py-3 hover:text-primary touch-manipulation"
-                      style={navTextStyle}
-                    >
-                      {item.name}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </NavbarMenuItem>
+            {/* Popular Categories list removed from mobile menu */}
 
             {isLoggedIn ? (
               <>
