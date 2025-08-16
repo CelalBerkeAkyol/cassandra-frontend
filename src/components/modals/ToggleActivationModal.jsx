@@ -18,14 +18,12 @@ const ToggleActivationModal = ({
   if (!selectedUser) return null;
 
   const isActivating = !selectedUser.isActive;
-  const actionText = isActivating ? "aktifleştirmek" : "deaktif etmek";
-  const buttonText = isActivating ? "Aktifleştir" : "Deaktif Et";
+  const actionText = isActivating ? "activate" : "deactivate";
+  const buttonText = isActivating ? "Activate" : "Deactivate";
   const buttonColor = isActivating
     ? "bg-green-500 hover:bg-green-600"
     : "bg-orange-500 hover:bg-orange-600";
-  const headerText = isActivating
-    ? "Kullanıcı Aktivasyon"
-    : "Kullanıcı Deaktivasyon";
+  const headerText = isActivating ? "User Activation" : "User Deactivation";
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -37,18 +35,19 @@ const ToggleActivationModal = ({
             </ModalHeader>
             <ModalBody>
               <p>
-                <b>{selectedUser.userName}</b> ({selectedUser.email})
-                kullanıcısını {actionText} istediğinize emin misiniz?
+                Are you sure you want to {actionText} user{" "}
+                <b>{selectedUser.userName}</b> ({selectedUser.email})?
               </p>
               {!isActivating && (
                 <p className="text-orange-600 mt-2">
-                  Not: Deaktif edilen kullanıcı sisteme giriş yapamayacaktır.
+                  Note: Deactivated users will not be able to log into the
+                  system.
                 </p>
               )}
             </ModalBody>
             <ModalFooter>
               <Button variant="flat" onPress={onCloseModal}>
-                İptal
+                Cancel
               </Button>
               <Button
                 className={`text-white ${buttonColor}`}

@@ -9,7 +9,7 @@ export default function BannerComponent() {
       <div className="max-w-7xl mx-auto flex items-center justify-center gap-x-2 sm:gap-x-3">
         <p className="text-xs sm:text-sm text-white line-clamp-1 flex-grow-0">
           <Link className="text-inherit whitespace-nowrap" to="/about-us">
-            Çalışmalarımızı beğeniyorsanız bize destek olabilirsiniz.
+            If you like our work, you can support us.
           </Link>
         </p>
         <Button
@@ -27,7 +27,7 @@ export default function BannerComponent() {
           variant="bordered"
           size="sm"
         >
-          <span className="whitespace-nowrap">Destek Ol</span>
+          <span className="whitespace-nowrap">Support Us</span>
         </Button>
       </div>
     </div>

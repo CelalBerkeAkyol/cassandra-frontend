@@ -24,10 +24,10 @@ export default function CTASection() {
           </svg>
           <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left lg:w-1/3">
             <h2 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Modelini Eğit, Geleceği Tahmin Et
+              Train Your Model, Predict the Future
             </h2>
             <p className="mt-6 text-pretty text-lg/8 text-gray-300">
-              Yatırım Kararlarında Yeni Dönem: Derin Öğrenme Destekli Analiz.
+              New Era in Investment Decisions: Deep Learning-Powered Analysis.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <a

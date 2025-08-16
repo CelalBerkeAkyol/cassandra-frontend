@@ -8,15 +8,15 @@ export default function Footer() {
   const showDeleteAccountLink = isLoggedIn && userInfo?.role === "user";
 
   const footerLinks = [
-    { name: "Son Yazılar", path: "/blog/posts" },
-    { name: "Kategoriler", path: "/blog/categories" },
+    { name: "Latest Posts", path: "/blog/posts" },
+    { name: "Categories", path: "/blog/categories" },
   ];
 
   const companyLinks = [
-    { name: "Yazarlar", path: "/team" },
-    { name: "Hakkımızda", path: "/about-us" },
-    { name: "Gizlilik Politikası", path: "/privacy-policy" },
-    { name: "Kullanım Koşulları", path: "/disclaimer" },
+    { name: "Authors", path: "/team" },
+    { name: "About Us", path: "/about-us" },
+    { name: "Privacy Policy", path: "/privacy-policy" },
+    { name: "Terms of Service", path: "/disclaimer" },
   ];
 
   return (
@@ -55,7 +55,7 @@ export default function Footer() {
                     to="/delete-account"
                     className="hover:underline text-danger-400"
                   >
-                    Hesabımı Sil
+                    Delete My Account
                   </Link>
                 </li>
               )}
@@ -66,7 +66,7 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="mt-8 border-t border-slate-700  text-center py-4 text-sm">
-        <p>© 2025 Cassandra tüm hakları saklıdır.</p>
+        <p>© 2025 Cassandra. All rights reserved.</p>
       </div>
     </footer>
   );

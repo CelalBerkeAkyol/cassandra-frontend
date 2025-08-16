@@ -15,46 +15,46 @@ import { Alert, Button } from "@nextui-org/react";
  * @returns {React.ReactNode}
  */
 export default function ErrorComponent({
-  message = "Beklenmeyen bir hata oluştu.",
+  message = "An unexpected error occurred.",
   title,
   code,
   color = "warning",
   onAction,
-  actionText = "Tekrar Dene",
+  actionText = "Try Again",
   onBack = () => window.history.back(),
 }) {
   // Set default title based on error type if not provided
   if (!title) {
     switch (code) {
       case "INTERNAL_SERVER_ERROR":
-        title = "Sunucu Hatası";
+        title = "Server Error";
         break;
       case "UNAUTHORIZED":
       case "FORBIDDEN":
-        title = "Yetkilendirme Hatası";
+        title = "Authorization Error";
         break;
       case "NOT_FOUND":
-        title = "İçerik Bulunamadı";
+        title = "Content Not Found";
         break;
       case "VALIDATION_ERROR":
-        title = "Doğrulama Hatası";
+        title = "Validation Error";
         break;
       case "BAD_REQUEST":
-        title = "Geçersiz İstek";
+        title = "Invalid Request";
         break;
       case "SERVICE_UNAVAILABLE":
-        title = "Servis Kullanılamıyor";
+        title = "Service Unavailable";
         break;
       case "NO_TOKEN":
-        title = "Hesabınıza giriş yapmanız gerekiyor";
+        title = "You need to log in to your account";
         break;
       default:
-        title = "Hata";
+        title = "Error";
     }
   }
 
   // Construct error message with code if present
-  const fullMessage = code ? `${message} (Kod: ${code})` : message;
+  const fullMessage = code ? `${message} (Code: ${code})` : message;
 
   return (
     <div className="flex flex-col items-center justify-center p-4 max-w-3xl mx-auto">
@@ -76,7 +76,7 @@ export default function ErrorComponent({
         )}
 
         <Button variant="ghost" onPress={onBack}>
-          Geri Dön
+          Go Back
         </Button>
       </div>
     </div>

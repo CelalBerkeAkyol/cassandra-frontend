@@ -10,154 +10,147 @@ const DisclaimerPage = () => {
           <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
             <div className="mx-auto my-4 sm:my-6 text-start bg-gradient-to-r from-sky-950 to-lime-950 text-white py-4 px-4 rounded-lg shadow-lg">
               <h1 className="text-2xl sm:text-3xl font-bold">
-                Kullanım Politikası
+                Terms of Service
               </h1>
               <p className="mt-2 text-sm sm:text-base text-gray-300">
-                Sitemizi kullanırken geçerli olan koşullar ve sorumluluklar
+                Terms and responsibilities applicable when using our site
               </p>
             </div>
 
             <div className="pt-3">
               <div className="prose prose-gray max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600">
                 <h2 className="text-xl font-bold mt-8 mb-3">
-                  1. Koşulların Kabulü
+                  1. Acceptance of Terms
                 </h2>
                 <p className="mb-6">
-                  Sitemizi ziyaret eden veya kullanan herkes bu kullanım
-                  koşullarını kabul etmiş sayılır. Bu koşulları kabul
-                  etmiyorsanız lütfen siteyi kullanmayınız. Site içinde sunulan
-                  hizmet ve içeriklerden yararlanmaya devam etmeniz,
-                  güncellenebilecek koşulların en son halini de kabul ettiğiniz
-                  anlamına gelir.
+                  Anyone who visits or uses our site is deemed to have accepted
+                  these terms of use. If you do not accept these terms, please
+                  do not use the site. Your continued use of the services and
+                  content offered on the site means that you also accept the
+                  latest version of the terms that may be updated.
                 </p>
 
                 <h2 className="text-xl font-bold mt-8 mb-3">
-                  2. Yasalara Uygunluk
+                  2. Compliance with Laws
                 </h2>
                 <p className="mb-6">
-                  Siteyi kullanırken Türkiye Cumhuriyeti yasalarına ve ilgili
-                  düzenlemelere uygun davranmayı kabul edersiniz. Hiçbir şekilde
-                  yasa dışı, zararlı, başkalarının haklarını ihlal eden veya
-                  içeriğin işleyişini aksatacak faaliyetlerde bulunamazsınız.
-                  Aksi takdirde, doğan her türlü hukuki ve cezai sorumluluk
-                  tarafınıza aittir ve site sahibi gerekli yasal adımları atma
-                  hakkını saklı tutar.
+                  When using the site, you agree to act in accordance with the
+                  laws of the Republic of Turkey and relevant regulations. You
+                  may not engage in any illegal, harmful activities that violate
+                  the rights of others or disrupt the operation of the content.
+                  Otherwise, all legal and criminal liability arising therefrom
+                  belongs to you, and the site owner reserves the right to take
+                  necessary legal steps.
                 </p>
 
                 <h2 className="text-xl font-bold mt-8 mb-3">
-                  3. İçerik ve Fikri Mülkiyet
+                  3. Content and Intellectual Property
                 </h2>
                 <p className="mb-6">
-                  Bu blog sitesinde yayınlanan yazı, görsel, video ve diğer tüm
-                  içerikler aksi belirtilmedikçe site sahibine veya içeriğin
-                  yazarına aittir ve telif hakları ile korunmaktadır.
-                  Kullanıcılar, sitedeki içerikleri kişisel bilgilendirme amaçlı
-                  olarak görüntüleyebilir; ancak bu içerikleri önceden yazılı
-                  izin almaksızın kopyalayamaz, çoğaltamaz, dağıtamaz, başka
-                  yerlerde yayımlayamaz veya ticari amaçla kullanamaz.
-                  İçeriklerin izinsiz kullanımı durumunda hukuki yaptırımlar söz
-                  konusu olabilir.
+                  All articles, images, videos and other content published on
+                  this blog site belong to the site owner or the author of the
+                  content unless otherwise stated, and are protected by
+                  copyright. Users may view the content on the site for personal
+                  information purposes; however, they may not copy, reproduce,
+                  distribute, publish elsewhere or use for commercial purposes
+                  without prior written permission. Legal sanctions may apply in
+                  case of unauthorized use of content.
                 </p>
 
                 <h2 className="text-xl font-bold mt-8 mb-3">
-                  4. Kullanıcı Katkıları
+                  4. User Contributions
                 </h2>
                 <p className="mb-6">
-                  Bu sitede genel kullanıcılar yorum yapamaz veya herhangi bir
-                  içerik gönderemez. Sitede yayınlanan tüm içerikler, site
-                  sahibi veya onun tarafından yazar olarak yetkilendirilen
-                  kişilerce oluşturulmaktadır. Bu nedenle, sitede yer alan
-                  içerikler için yalnızca ilgili yazarlar sorumludur;
-                  kullanıcıların paylaştığı herhangi bir içerik bulunmamaktadır.
+                  General users cannot comment or submit any content on this
+                  site. All content published on the site is created by the site
+                  owner or persons authorized by him as authors. Therefore, only
+                  the relevant authors are responsible for the content on the
+                  site; there is no content shared by users.
                 </p>
 
                 <h2 className="text-xl font-bold mt-8 mb-3">
-                  5. Ücret ve Üyelik
+                  5. Fees and Membership
                 </h2>
                 <p className="mb-6">
-                  Sitemizin kullanımı ücretsizdir ve içeriklere erişim için
-                  herhangi bir üyelik veya abonelik gerekmemektedir. Sitede
-                  satışa sunulan bir ürün veya hizmet bulunmamaktadır.
-                  Kullanıcılar, herhangi bir ödeme yapmadan sitedeki tüm içeriğe
-                  erişebilir.
+                  Use of our site is free and no membership or subscription is
+                  required to access content. There are no products or services
+                  offered for sale on the site. Users can access all content on
+                  the site without making any payment.
                 </p>
 
                 <h2 className="text-xl font-bold mt-8 mb-3">
-                  6. Gizlilik ve Çerezler
+                  6. Privacy and Cookies
                 </h2>
                 <p className="mb-6">
-                  Kişisel verilerinizin gizliliğine önem veriyoruz. Sitemizi
-                  kullanırken bazı kişisel verilerinizin toplanabileceğini ve
-                  çerez (cookie) kullanılabileceğini lütfen unutmayın. Bu
-                  konudaki detaylar için aşağıda yer alan Gizlilik Politikamızı
-                  inceleyebilirsiniz. Siteyi kullanmaya devam ederek gizlilik
-                  politikasında açıklanan veri uygulamalarını da kabul etmiş
-                  olursunuz.
+                  We value the privacy of your personal data. Please remember
+                  that some of your personal data may be collected and cookies
+                  may be used while using our site. For details on this subject,
+                  you can review our Privacy Policy below. By continuing to use
+                  the site, you also accept the data practices described in the
+                  privacy policy.
                 </p>
 
                 <h2 className="text-xl font-bold mt-8 mb-3">
-                  7. Harici Bağlantılar
+                  7. External Links
                 </h2>
                 <p className="mb-6">
-                  Sitemizde başka web sitelerine yönlendiren bağlantılar
-                  bulunabilir. Bu dış sitelerin içeriğinden veya bu sitelerin
-                  kişisel verileri işleme uygulamalarından site sahibi sorumlu
-                  değildir. Harici bir bağlantıya tıkladığınızda, o siteye ait
-                  koşullar ve gizlilik politikaları geçerli olur.
+                  There may be links on our site that redirect to other
+                  websites. The site owner is not responsible for the content of
+                  these external sites or their personal data processing
+                  practices. When you click on an external link, the terms and
+                  privacy policies of that site apply.
+                </p>
+
+                <h2 className="text-xl font-bold mt-8 mb-3">8. Disclaimer</h2>
+                <p className="mb-6">
+                  While maximum care is taken for the accuracy, currency and
+                  completeness of the content on the site, no express or implied
+                  warranty is given regarding the accuracy or suitability of the
+                  information provided for a particular purpose. Articles in
+                  areas such as finance, economics and artificial intelligence
+                  are for general information purposes only and do not
+                  constitute investment, financial or legal advice in any way.
+                  Therefore, the responsibility for decisions taken based on the
+                  information on the site belongs to the user. The site owner
+                  cannot be held responsible for any direct or indirect damages
+                  that may arise from the use of the content on the site.
                 </p>
 
                 <h2 className="text-xl font-bold mt-8 mb-3">
-                  8. Sorumluluk Reddi
+                  9. Service Continuity
                 </h2>
                 <p className="mb-6">
-                  Sitedeki içeriklerin doğruluğu, güncelliği ve eksiksizliği
-                  için azami özen gösterilmekle birlikte, sunulan bilgilerin
-                  doğruluğu veya belirli bir amaca uygunluğu konusunda açık ya
-                  da örtük bir garanti verilmez. Finans, ekonomi ve yapay zeka
-                  gibi alanlardaki yazılar sadece genel bilgilendirme amaçlıdır
-                  ve hiçbir şekilde yatırım, finansal veya hukuki tavsiye
-                  niteliği taşımaz. Bu nedenle, sitedeki bilgilere dayanarak
-                  alınan kararların sorumluluğu kullanıcıya aittir. Site sahibi,
-                  sitedeki içeriklerin kullanılması sonucunda doğabilecek
-                  doğrudan veya dolaylı zararlardan sorumlu tutulamaz.
+                  The site owner does not make any commitment that the site will
+                  work uninterruptedly or without errors. Access to the site may
+                  be interrupted from time to time or content may change due to
+                  technical failures, maintenance work or situations beyond our
+                  control. The site owner does not guarantee that the site or
+                  content will be accessible at any time.
                 </p>
 
                 <h2 className="text-xl font-bold mt-8 mb-3">
-                  9. Hizmet Sürekliliği
+                  10. Right to Change
                 </h2>
                 <p className="mb-6">
-                  Site sahibi, sitenin kesintisiz veya hatasız çalışacağına dair
-                  bir taahhüt vermemektedir. Teknik arızalar, bakım çalışmaları
-                  veya kontrolümüz dışı gelişen durumlar nedeniyle siteye erişim
-                  zaman zaman aksayabilir veya içerikler değişebilir. Site
-                  sahibi, sitenin veya içeriğin herhangi bir zaman diliminde
-                  erişilebilir olmasını garanti etmez.
+                  The site owner reserves the right to make changes to this
+                  Terms of Service at any time. Updated terms take effect
+                  immediately upon publication on the site. It is the users' own
+                  responsibility to periodically review the terms on the site
+                  and be aware of changes. Continued use of the site after
+                  changes means acceptance of the updated terms.
                 </p>
 
                 <h2 className="text-xl font-bold mt-8 mb-3">
-                  10. Değişiklik Hakkı
+                  11. Applicable Law
                 </h2>
                 <p className="mb-6">
-                  Site sahibi, bu Kullanım Politikası'nda her zaman değişiklik
-                  yapma hakkını saklı tutar. Güncellenmiş koşullar site üzerinde
-                  yayımlandığı anda yürürlüğe girer. Kullanıcıların, sitedeki
-                  koşulları periyodik olarak gözden geçirmesi ve
-                  değişikliklerden haberdar olması kendi sorumluluklarındadır.
-                  Değişiklik sonrası sitenin kullanılmaya devam edilmesi,
-                  güncellenen koşulların kabul edildiği anlamına gelir.
-                </p>
-
-                <h2 className="text-xl font-bold mt-8 mb-3">
-                  11. Uygulanacak Hukuk
-                </h2>
-                <p className="mb-6">
-                  İşbu koşullar ve site kullanımından kaynaklanabilecek
-                  uyuşmazlıklar Türkiye Cumhuriyeti yasalarına tabi olacak ve
-                  ihtilaf halinde Türkiye mahkemeleri yetkili olacaktır.
+                  These terms and disputes arising from the use of the site will
+                  be subject to the laws of the Republic of Turkey, and Turkish
+                  courts will have jurisdiction in case of dispute.
                 </p>
 
                 <p className="text-sm text-gray-400 mt-8 pt-4 border-t border-gray-200">
-                  Yürürlük Tarihi: 26 Nisan 2025
+                  Effective Date: April 26, 2025
                 </p>
               </div>
             </div>

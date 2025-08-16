@@ -35,7 +35,7 @@ export default function ForgetpasswordComponent() {
       if (response.data.success) {
         setStatus({
           message:
-            "Doğrulama kodu e-posta adresinize gönderildi. Lütfen gelen kutunuzu kontrol edin.",
+            "Verification code has been sent to your email address. Please check your inbox.",
           type: "success",
         });
         setStep(2);
@@ -44,7 +44,7 @@ export default function ForgetpasswordComponent() {
       const errorMessage =
         error.response?.data?.message ||
         error.response?.data?.error?.details?.[0] ||
-        "Bir hata oluştu. Lütfen tekrar deneyin.";
+        "An error occurred. Please try again.";
 
       if (error.response?.status === 429) {
         // Rate limit error
@@ -84,7 +84,7 @@ export default function ForgetpasswordComponent() {
         setToken(response.data.data.token);
         setStatus({
           message:
-            "Doğrulama başarılı. Şifre sıfırlama sayfasına yönlendiriliyorsunuz.",
+            "Verification successful. You are being redirected to the password reset page.",
           type: "success",
         });
 
@@ -101,7 +101,7 @@ export default function ForgetpasswordComponent() {
       const errorMessage =
         error.response?.data?.message ||
         error.response?.data?.error?.details?.[0] ||
-        "Bir hata oluştu. Lütfen tekrar deneyin.";
+        "An error occurred. Please try again.";
 
       if (error.response?.data?.error?.code === "INVALID_CODE") {
         // Track remaining attempts if available
@@ -109,7 +109,7 @@ export default function ForgetpasswordComponent() {
         setRemainingAttempts(newRemainingAttempts);
 
         setStatus({
-          message: `${errorMessage} (${newRemainingAttempts} deneme hakkınız kaldı)`,
+          message: `${errorMessage} (${newRemainingAttempts} attempts remaining)`,
           type: "error",
         });
       } else if (
@@ -152,7 +152,7 @@ export default function ForgetpasswordComponent() {
 
       if (response.data.success) {
         setStatus({
-          message: "Yeni doğrulama kodu e-posta adresinize gönderildi.",
+          message: "New verification code has been sent to your email address.",
           type: "success",
         });
       }
@@ -160,7 +160,7 @@ export default function ForgetpasswordComponent() {
       const errorMessage =
         error.response?.data?.message ||
         error.response?.data?.error?.details?.[0] ||
-        "Bir hata oluştu. Lütfen tekrar deneyin.";
+        "An error occurred. Please try again.";
 
       setStatus({
         message: errorMessage,
@@ -175,7 +175,7 @@ export default function ForgetpasswordComponent() {
     <div className="flex h-full justify-center my-14">
       <div className="flex w-full max-w-sm flex-col gap-4 rounded-large bg-gray-50 px-8 pb-10 pt-6 shadow-small">
         <p className="pb-2 text-xl font-medium">
-          {step === 1 ? "Şifremi Unuttum" : "Doğrulama Kodu"}
+          {step === 1 ? "Forgot Password" : "Verification Code"}
         </p>
 
         {status.message && (
@@ -193,9 +193,9 @@ export default function ForgetpasswordComponent() {
         {step === 1 ? (
           <form className="flex flex-col gap-3" onSubmit={handleEmailSubmit}>
             <Input
-              label="E-posta"
+              label="Email"
               name="email"
-              placeholder="E-posta adresinizi girin"
+              placeholder="Enter your email address"
               type="email"
               variant="bordered"
               value={email}
@@ -204,8 +204,8 @@ export default function ForgetpasswordComponent() {
             />
 
             <p className="text-sm text-gray-500 mt-1">
-              E-posta adresinizi girin ve şifrenizi sıfırlamak için size bir
-              doğrulama kodu göndereceğiz.
+              Enter your email address and we will send you a verification code
+              to reset your password.
             </p>
 
             <Button
@@ -213,7 +213,7 @@ export default function ForgetpasswordComponent() {
               type="submit"
               isDisabled={isLoading}
             >
-              {isLoading ? "Gönderiliyor..." : "Doğrulama Kodu Gönder"}
+              {isLoading ? "Sending..." : "Send Verification Code"}
             </Button>
 
             <div className="text-center mt-2">
@@ -223,7 +223,7 @@ export default function ForgetpasswordComponent() {
                 variant="light"
                 onClick={() => navigate("/login")}
               >
-                Giriş Sayfasına Dön
+                Back to Login
               </Button>
             </div>
           </form>
@@ -233,7 +233,7 @@ export default function ForgetpasswordComponent() {
             onSubmit={handleVerificationSubmit}
           >
             <Input
-              label="E-posta"
+              label="Email"
               name="email"
               type="email"
               variant="bordered"
@@ -244,9 +244,9 @@ export default function ForgetpasswordComponent() {
             />
 
             <Input
-              label="Doğrulama Kodu"
+              label="Verification Code"
               name="verificationCode"
-              placeholder="E-postadaki doğrulama kodunu girin"
+              placeholder="Enter the verification code from your email"
               type="text"
               variant="bordered"
               value={verificationCode}
@@ -255,8 +255,8 @@ export default function ForgetpasswordComponent() {
             />
 
             <p className="text-sm text-gray-500 mt-1">
-              E-posta adresinize gönderilen doğrulama kodunu girin. Kod sınırlı
-              bir süre geçerlidir.
+              Enter the verification code sent to your email address. The code
+              is valid for a limited time.
             </p>
 
             <Button
@@ -264,7 +264,7 @@ export default function ForgetpasswordComponent() {
               type="submit"
               isDisabled={isLoading}
             >
-              {isLoading ? "Doğrulanıyor..." : "Doğrula ve Devam Et"}
+              {isLoading ? "Verifying..." : "Verify and Continue"}
             </Button>
 
             <div className="flex justify-between mt-2">
@@ -278,7 +278,7 @@ export default function ForgetpasswordComponent() {
                   setStatus({ message: "", type: "" });
                 }}
               >
-                Geri
+                Back
               </Button>
 
               <Button
@@ -288,7 +288,7 @@ export default function ForgetpasswordComponent() {
                 onClick={handleResendCode}
                 isDisabled={isLoading}
               >
-                Kodu Yeniden Gönder
+                Resend Code
               </Button>
             </div>
           </form>

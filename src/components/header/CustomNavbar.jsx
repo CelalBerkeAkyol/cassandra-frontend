@@ -21,17 +21,11 @@ import { logRender } from "../../utils/logger";
 
 import LogoutComponent from "../auth/LogoutComponent";
 
-// Navbar bağlantıları ve kategorileri bileşen dışına taşıyarak her render'da yeniden oluşturulmasını önlüyoruz
+// Navbar links and categories moved outside component to prevent recreation on every render
 const navbarLinks = [
-  { name: "Ana Sayfa", path: "/" },
-  { name: "Son Yazılar", path: "/blog/posts" },
-  { name: "Kategoriler", path: "/blog/categories" },
-];
-
-const categories = [
-  { name: "Ekonomi", path: "/blog/category/ekonomi" },
-  { name: "Finans", path: "/blog/category/finans" },
-  { name: "Veri Bilimi", path: "/blog/category/veri-bilimi" },
+  { name: "Home", path: "/" },
+  { name: "Latest Posts", path: "/blog/posts" },
+  { name: "Categories", path: "/blog/categories" },
 ];
 
 // Seçici fonksiyonları bileşen dışına taşıyarak her render'da yeniden oluşturulmasını önlüyoruz
@@ -145,31 +139,7 @@ function CustomNavbar() {
             </NavbarItem>
           ))}
 
-          <Dropdown>
-            <DropdownTrigger className="default">
-              <Button
-                variant="default"
-                className="text-gray-900 hover:text-primary h-full"
-                endContent={
-                  <Icon icon="material-symbols:arrow-drop-down" width="20" />
-                }
-                style={navTextStyle}
-              >
-                Popüler Kategoriler
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu aria-label="Kategoriler" color="default">
-              {categories.map((item, index) => (
-                <DropdownItem
-                  key={index}
-                  onClick={() => handleNavigate(item.path)}
-                  textValue={item.name}
-                >
-                  <span style={navTextStyle}>{item.name}</span>
-                </DropdownItem>
-              ))}
-            </DropdownMenu>
-          </Dropdown>
+          {/* Popular Categories dropdown removed */}
         </NavbarContent>
 
         {/* Ara butonu ve kullanıcı işlemleri */}
@@ -185,7 +155,7 @@ function CustomNavbar() {
               className="min-w-0 px-2 sm:px-3"
             >
               <span className="hidden sm:block" style={navTextStyle}>
-                Ara
+                Search
               </span>
             </Button>
           </NavbarItem>
@@ -221,7 +191,7 @@ function CustomNavbar() {
                   className="px-3 py-1 hover:text-primary"
                   style={navTextStyle}
                 >
-                  Giriş Yap
+                  Login
                 </button>
               </NavbarItem>
 
@@ -231,7 +201,7 @@ function CustomNavbar() {
                   className="px-3 py-1 hover:text-primary"
                   style={navTextStyle}
                 >
-                  Kayıt Ol
+                  Register
                 </button>
               </NavbarItem>
             </>
@@ -253,25 +223,7 @@ function CustomNavbar() {
               </NavbarMenuItem>
             ))}
 
-            <NavbarMenuItem>
-              <div className="py-4">
-                <p className="font-semibold mb-3" style={navTextStyle}>
-                  Popüler Kategoriler
-                </p>
-                <div className="flex flex-col gap-2 pl-2">
-                  {categories.map((item, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleNavigate(item.path)}
-                      className="w-full text-left py-3 hover:text-primary touch-manipulation"
-                      style={navTextStyle}
-                    >
-                      {item.name}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </NavbarMenuItem>
+            {/* Popular Categories list removed from mobile menu */}
 
             {isLoggedIn ? (
               <>
@@ -282,7 +234,7 @@ function CustomNavbar() {
                       className="w-full text-left py-4 hover:text-primary"
                       style={navTextStyle}
                     >
-                      Profil ({userName})
+                      Profile ({userName})
                     </button>
                   </NavbarMenuItem>
                 )}
@@ -298,7 +250,7 @@ function CustomNavbar() {
                     className="w-full text-left py-4 hover:text-primary"
                     style={navTextStyle}
                   >
-                    Giriş Yap
+                    Login
                   </button>
                 </NavbarMenuItem>
                 <NavbarMenuItem>
@@ -307,7 +259,7 @@ function CustomNavbar() {
                     className="w-full text-left py-4 hover:text-primary"
                     style={navTextStyle}
                   >
-                    Kayıt Ol
+                    Register
                   </button>
                 </NavbarMenuItem>
               </>

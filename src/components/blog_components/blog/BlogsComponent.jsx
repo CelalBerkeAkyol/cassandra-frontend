@@ -47,7 +47,7 @@ export default function BlogsComponent() {
         <div className="mx-auto my-4 sm:my-6 text-start bg-gradient-to-r from-sky-950 to-lime-950 text-white py-4 px-4 rounded-lg shadow-lg">
           <h1 className="text-2xl sm:text-3xl font-bold">Blog</h1>
           <p className="mt-2 text-sm sm:text-base text-gray-300">
-            Güncel içeriklerimizi keşfedin.
+            Discover our latest content.
           </p>
         </div>
         <div className=" border-gray-200 pt-4">

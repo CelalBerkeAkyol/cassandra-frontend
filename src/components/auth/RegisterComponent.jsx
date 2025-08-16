@@ -40,7 +40,7 @@ export default function RegisterComponent() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
-      warning("Parolalar eşleşmiyor. Lütfen kontrol ediniz.");
+      warning("Passwords do not match. Please check.");
       return;
     }
     dispatch(registerUser(formData));
@@ -50,7 +50,7 @@ export default function RegisterComponent() {
   useEffect(() => {
     if (isSuccess) {
       success(
-        "Hesabınız başarıyla oluşturuldu!\nE-postanızı kontrol ederek hesabınızı doğrulayın."
+        "Your account has been successfully created!\nPlease check your email to verify your account."
       );
       dispatch(clearState()); // State temizliği
       navigate("/");
@@ -62,7 +62,7 @@ export default function RegisterComponent() {
         // Sessizce işlem yap, kullanıcıya gösterme
         dispatch(clearState());
       } else {
-        showError(errorMessage || "Kayıt işlemi sırasında bir hata oluştu.");
+        showError(errorMessage || "An error occurred during registration.");
       }
     }
 
@@ -83,18 +83,18 @@ export default function RegisterComponent() {
     <div className="flex h-full w-full items-center justify-center py-8">
       <div className="flex w-full max-w-sm flex-col gap-4 rounded-large bg-gray-50 p-8 shadow-small">
         <div className="flex flex-col items-center pb-6">
-          <p className="text-xl font-medium">Hoş Geldiniz</p>
+          <p className="text-xl font-medium">Welcome</p>
           <p className="text-small text-default-500">
-            Başlamak için bir hesap oluşturun
+            Create an account to get started
           </p>
         </div>
 
         <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
           <Input
             isRequired
-            label="Kullanıcı Adı"
+            label="Username"
             name="userName"
-            placeholder="Kullanıcı adınızı girin"
+            placeholder="Enter your username"
             type="text"
             variant="bordered"
             onChange={handleChange}
@@ -102,9 +102,9 @@ export default function RegisterComponent() {
 
           <Input
             isRequired
-            label="E-posta Adresi"
+            label="Email Address"
             name="email"
-            placeholder="E-posta adresinizi girin"
+            placeholder="Enter your email address"
             type="email"
             variant="bordered"
             onChange={handleChange}
@@ -112,9 +112,9 @@ export default function RegisterComponent() {
 
           <Input
             isRequired
-            label="Şifre"
+            label="Password"
             name="password"
-            placeholder="Şifrenizi girin"
+            placeholder="Enter your password"
             type={isVisible ? "text" : "password"}
             variant="bordered"
             endContent={
@@ -132,9 +132,9 @@ export default function RegisterComponent() {
 
           <Input
             isRequired
-            label="Şifreyi Onayla"
+            label="Confirm Password"
             name="confirmPassword"
-            placeholder="Şifrenizi tekrar girin"
+            placeholder="Re-enter your password"
             type={isConfirmVisible ? "text" : "password"}
             variant="bordered"
             endContent={
@@ -153,13 +153,13 @@ export default function RegisterComponent() {
           />
 
           <Checkbox isRequired className="py-4" size="sm">
-            Kabul ediyorum&nbsp;
-            <Link href="#" size="sm">
-              Kullanım Koşulları
+            I agree to the&nbsp;
+            <Link href="/disclaimer" size="sm">
+              Terms of Service
             </Link>
-            &nbsp;ve&nbsp;
-            <Link href="#" size="sm">
-              Gizlilik Politikası
+            &nbsp;and&nbsp;
+            <Link href="/privacy-policy" size="sm">
+              Privacy Policy
             </Link>
           </Checkbox>
 
@@ -167,14 +167,14 @@ export default function RegisterComponent() {
             className="bg-primary text-white hover:bg-secondary"
             type="submit"
           >
-            Kayıt Ol
+            Register
           </Button>
         </form>
 
         <p className="text-center text-small mt-4">
-          Zaten bir hesabınız var mı?&nbsp;
+          Already have an account?&nbsp;
           <Link href="/login" size="sm">
-            Giriş Yap
+            Login
           </Link>
         </p>
       </div>

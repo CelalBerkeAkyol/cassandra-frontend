@@ -35,7 +35,7 @@ const TableOfContents = ({ content }) => {
   return (
     <div className="w-full pl-5">
       <h2 className="text-lg text-left text-gray-800 font-bold mb-2">
-        Hızlı Erişim
+        Table of Contents
       </h2>
       <ul className="list-none">
         {headings.map((heading, index) => (

@@ -40,9 +40,9 @@ const TeamPage = () => {
         <div className="bg-white py-2 mb-12 min-h-full">
           <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
             <div className="mx-auto my-4 sm:my-6 text-start bg-gradient-to-r from-gray-800 to-gray-700 text-white py-4 px-4 rounded-lg shadow-lg">
-              <h1 className="text-2xl sm:text-3xl font-bold">Yazarlarımız</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold">Our Authors</h1>
               <p className="mt-2 text-sm sm:text-base text-gray-300">
-                Cassandra'nın değerli içerik üreticileri ve uzmanları
+                Cassandra's valuable content creators and experts
               </p>
             </div>
 
@@ -52,12 +52,12 @@ const TeamPage = () => {
                   <Spinner
                     size="lg"
                     color="primary"
-                    label="Yazarlar yükleniyor..."
+                    label="Loading authors..."
                   />
                 </div>
               ) : teamMembers.length === 0 ? (
                 <div className="text-center py-12 bg-gray-50 rounded-lg">
-                  <p className="text-gray-500">Henüz yazar bulunmamaktadır.</p>
+                  <p className="text-gray-500">No authors found yet.</p>
                 </div>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5">

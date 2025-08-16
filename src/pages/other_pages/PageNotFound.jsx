@@ -23,19 +23,19 @@ export default function PageNotFound() {
             </div>
           </div>
 
-          {/* Finans & AI temalı mesaj */}
-          <h1 className="text-3xl font-bold mb-4">Sayfa Bulunamadı</h1>
+          {/* Finance & AI themed message */}
+          <h1 className="text-3xl font-bold mb-4">Page Not Found</h1>
           <p className="text-lg mb-6">
-            Üzgünüz, aradığınız sayfayı bulamadık. Link değişmiş veya içerik
-            kaldırılmış olabilir
+            Sorry, we couldn't find the page you're looking for. The link may
+            have changed or the content may have been removed.
           </p>
 
-          {/* Eylem düğmesi */}
+          {/* Action button */}
           <button
             onClick={() => (window.location.href = "/")}
             className="px-6 py-3 bg-gradient-to-r from-sky-800 to-lime-800 text-white font-medium rounded-lg  "
           >
-            Ana Sayfaya Dön
+            Return to Home
           </button>
         </div>
       </div>

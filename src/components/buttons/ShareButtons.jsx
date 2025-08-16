@@ -141,7 +141,7 @@ const ShareButtons = ({ url }) => {
         aria-label="Paylaş"
       >
         <Icon icon="mdi:share" width="18" />
-        <span>Paylaş</span>
+        <span>Share</span>
       </button>
 
       {/* Paylaşım seçenekleri dropdown */}
@@ -153,7 +153,7 @@ const ShareButtons = ({ url }) => {
         >
           <div className="mb-2 pb-2 border-b border-gray-100">
             <h3 className="text-sm font-medium text-gray-700">
-              Bu içeriği paylaş
+              Share this content on :
             </h3>
           </div>
           {shareOptions}

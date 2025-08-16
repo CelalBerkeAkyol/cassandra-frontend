@@ -14,7 +14,7 @@ export default function NewsletterComponent() {
     if (!email) {
       setStatus({
         type: "error",
-        message: "Lütfen e-posta adresinizi girin.",
+        message: "Please enter your email address.",
       });
       return;
     }
@@ -28,14 +28,14 @@ export default function NewsletterComponent() {
       if (response.data.success) {
         setStatus({
           type: "success",
-          message: "Abone olduğunuz için teşekkür ederiz!",
+          message: "Thank you for subscribing!",
         });
         setEmail("");
       } else {
         setStatus({
           type: "error",
           message:
-            response.data.message || "Bir hata oluştu. Lütfen tekrar deneyin.",
+            response.data.message || "An error occurred. Please try again.",
         });
       }
     } catch (error) {
@@ -44,7 +44,7 @@ export default function NewsletterComponent() {
         type: "error",
         message:
           error.response?.data?.message ||
-          "Bir hata oluştu. Lütfen tekrar deneyin.",
+          "An error occurred. Please try again.",
       });
     } finally {
       setLoading(false);
@@ -57,18 +57,18 @@ export default function NewsletterComponent() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
             <h2 className="text-4xl font-semibold tracking-tight text-white">
-              Bültenimize Abone Olun
+              Subscribe to Our Newsletter
             </h2>
             <p className="mt-4 text-lg text-gray-300">
-              En son güncellemeler, makaleler ve içgörüler hakkında bilgi almak
-              için e-posta listemize kaydolun.
+              Sign up for our email list to receive the latest updates, articles
+              and insights.
             </p>
             <form
               onSubmit={handleSubmit}
               className="mt-6 flex max-w-md gap-x-4"
             >
               <label htmlFor="email-address" className="sr-only">
-                E-posta adresi
+                Email address
               </label>
               <input
                 id="email-address"
@@ -77,7 +77,7 @@ export default function NewsletterComponent() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                placeholder="E-posta adresinizi girin"
+                placeholder="Enter your email address"
                 autoComplete="email"
                 className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary sm:text-sm/6"
               />
@@ -88,7 +88,7 @@ export default function NewsletterComponent() {
                   loading ? "bg-gray-500" : "bg-primary hover:bg-secondary"
                 } px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary`}
               >
-                {loading ? "Gönderiliyor..." : "Abone Ol"}
+                {loading ? "Sending..." : "Subscribe"}
               </button>
             </form>
             {status.message && (
@@ -110,17 +110,17 @@ export default function NewsletterComponent() {
                 />
               </div>
               <dt className="mt-4 text-base font-semibold text-white">
-                Spam Yok
+                No Spam
               </dt>
               <dd className="mt-2 text-base/7 text-gray-400">
-                Sadece önemli güncellemeler ve içerikler hakkında bilgi veririz.
-                E-postalarımızdan istediğiniz zaman çıkabilirsiniz.
+                We only inform you about important updates and content. You can
+                unsubscribe from our emails at any time.
               </dd>
             </div>
 
             <div className="flex flex-col items-start">
               <dt className="text-base font-semibold text-white mb-4">
-                Bizi Bulun
+                Find Us
               </dt>
               <div className="flex space-x-4">
                 <a
