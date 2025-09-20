@@ -8,6 +8,12 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  /* Prose CSS custom properties override */
+  .prose {
+    --tw-prose-pre-code: #000000;
+    --tw-prose-code: #000000;
+  }
+
   /* Dokunmatik hedef boyutlarını artır */
   button,
   a,
@@ -70,13 +76,49 @@
     @apply !m-0 !p-0 !bg-transparent;
   }
 
-  .prose code {
+  /* Bu kural deaktif edildi - normal code etiketleri için aşağıdaki kuralı kullanıyoruz */
+  /* .prose code {
     @apply !bg-gray-100 dark:!bg-gray-800 !text-red-600 dark:!text-red-400 !px-1.5 !py-0.5 !rounded !text-sm !font-mono;
-  }
+  } */
 
   /* Pre içindeki code için farklı stil (kod blokları) */
   .prose pre code {
     @apply !bg-transparent !text-inherit !p-0 !rounded-none;
+  }
+
+  /* Normal code etiketleri için siyah renk */
+  .prose code,
+  code:not(pre code) {
+    color: #000000 !important;
+    background-color: transparent !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  /* Prose pre kuralını override et */
+  .prose :where(pre):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    color: inherit !important;
+  }
+
+  /* Pre içindeki code etiketleri için özel kural */
+  .prose
+    :where(pre code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    color: #000000 !important;
+  }
+
+  /* Bold metinler için daha koyu siyah */
+  .prose strong code,
+  .prose b code,
+  .prose code strong,
+  .prose code b,
+  strong code,
+  b code,
+  code strong,
+  code b {
+    color: #1a1a1a !important;
+    font-weight: bold !important;
   }
 
   /* Kod blokları için scrollbar stilleri */
