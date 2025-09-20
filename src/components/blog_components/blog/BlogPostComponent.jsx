@@ -8,6 +8,7 @@ import { Button, Chip, Avatar } from "@nextui-org/react";
 import ShareButtons from "../../buttons/ShareButtons";
 import VoteButtons from "../../buttons/VoteButton";
 import { Icon } from "@iconify/react";
+import CodeBlock from "./CodeBlock";
 
 // Kategori isimlerini okunabilir hale getiriyor
 function slugToReadable(slug) {
@@ -120,6 +121,9 @@ const BlogPostComponent = ({ post }) => {
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeRaw, rehypeSlug]}
+          components={{
+            code: CodeBlock,
+          }}
         >
           {post.content}
         </ReactMarkdown>
