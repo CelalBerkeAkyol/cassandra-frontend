@@ -54,3 +54,45 @@
 .animate-fade-in-down {
   animation: fadeInDown 0.2s ease-out forwards;
 }
+
+/* Code block özel stilleri */
+@layer components {
+  .code-block-container {
+    @apply rounded-lg overflow-hidden border border-gray-700 shadow-lg my-4;
+  }
+
+  .code-block-header {
+    @apply bg-gray-800 px-4 py-2 text-sm text-gray-300 border-b border-gray-700 font-medium;
+  }
+
+  /* Syntax highlighter için özel stiller */
+  .prose pre {
+    @apply !m-0 !p-0 !bg-transparent;
+  }
+
+  .prose code {
+    @apply !bg-gray-100 dark:!bg-gray-800 !text-red-600 dark:!text-red-400 !px-1.5 !py-0.5 !rounded !text-sm !font-mono;
+  }
+
+  /* Pre içindeki code için farklı stil (kod blokları) */
+  .prose pre code {
+    @apply !bg-transparent !text-inherit !p-0 !rounded-none;
+  }
+
+  /* Kod blokları için scrollbar stilleri */
+  .code-block-container pre::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .code-block-container pre::-webkit-scrollbar-track {
+    @apply bg-gray-800;
+  }
+
+  .code-block-container pre::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded;
+  }
+
+  .code-block-container pre::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}
