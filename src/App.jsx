@@ -26,6 +26,7 @@ import GalleryPage from "./pages/dashboard_pages/GalleryPage";
 import EditPostPage from "./pages/dashboard_pages/EditPostPage";
 import DashboardHomePage from "./pages/dashboard_pages/DashboardHomePage";
 import NewPostPage from "./pages/dashboard_pages/NewPostPage";
+import ImportMarkdownPage from "./pages/dashboard_pages/ImportMarkdownPage";
 import AllBlogPostsPage from "./pages/dashboard_pages/AllBlogPostsPage";
 import UsersPage from "./pages/dashboard_pages/UsersPage";
 import CategoriesManagementPage from "./pages/dashboard_pages/CategoriesManagementPage";
@@ -111,6 +112,14 @@ function AppContent() {
             element={
               <ProtectedRoute allowedRoles={["admin", "author"]}>
                 <NewPostPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard/post/import"
+            element={
+              <ProtectedRoute allowedRoles={["admin", "author"]}>
+                <ImportMarkdownPage />
               </ProtectedRoute>
             }
           />

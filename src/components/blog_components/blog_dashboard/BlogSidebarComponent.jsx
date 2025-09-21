@@ -77,6 +77,18 @@ const BlogSidebarComponent = () => {
           </li>
           <li>
             <Link
+              to="/dashboard/post/import"
+              className="flex items-center p-2 rounded-lg hover:bg-content3"
+            >
+              <Icon
+                icon="mdi:file-import-outline"
+                className="h-5 w-5 min-w-5"
+              />
+              {isOpen && <span className="ml-2">Import MD</span>}
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/dashboard/gallery"
               className="flex items-center p-2 rounded-lg hover:bg-content3"
             >
