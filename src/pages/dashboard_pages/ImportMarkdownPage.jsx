@@ -19,16 +19,6 @@ const ImportMarkdownPage = () => {
     }
   }, [dispatch, userInfo, isLoading]);
 
-  // Debug için console log
-  console.log("ImportMarkdownPage - User State:", {
-    isLoggedIn,
-    userInfo: userInfo ? "exists" : "null",
-    isLoading,
-    isAuthor,
-    isAdmin,
-    role: userInfo?.role,
-  });
-
   // Yükleme durumunda loading göster
   if (isLoading) {
     return (
@@ -37,23 +27,6 @@ const ImportMarkdownPage = () => {
         <span className="ml-3">Yükleniyor...</span>
       </div>
     );
-  }
-
-  // Giriş yapmamışsa login'e yönlendir
-  if (!isLoggedIn || !userInfo) {
-    console.log("ImportMarkdownPage - Redirecting to login");
-    return <Navigate to="/login" replace />;
-  }
-
-  // Yetki kontrolü - author veya admin olmalı
-  if (
-    !isAuthor &&
-    !isAdmin &&
-    userInfo.role !== "author" &&
-    userInfo.role !== "admin"
-  ) {
-    console.log("ImportMarkdownPage - Insufficient permissions");
-    return <Navigate to="/dashboard/home" replace />;
   }
 
   return (
