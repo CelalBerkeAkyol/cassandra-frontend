@@ -123,6 +123,17 @@ const BlogPostComponent = ({ post }) => {
           rehypePlugins={[rehypeRaw, rehypeSlug]}
           components={{
             code: CodeBlock,
+            img: ({ src, alt, ...props }) => (
+              <img
+                src={
+                  src?.startsWith("/api/")
+                    ? `http://api.cassandra.com.tr${src}`
+                    : src
+                }
+                alt={alt}
+                {...props}
+              />
+            ),
           }}
         >
           {post.content}
